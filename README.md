@@ -23,8 +23,8 @@ Problem Statement
 
 Tech Stacks used:
 =================
-Front end UI: HTML
+Front end UI: HTML.
 Language: Java, JDBC, Servlet, JSP.
-Server: Tomcat
-Database: MySQL
+Server: Tomcat.
+Database: MySQL.
 
