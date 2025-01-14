@@ -8,16 +8,17 @@ import in.ineuron.dao.ILibrarianDao;
 import in.ineuron.daofactory.librarianDaoFactory;
 
 public class LibrarianServiceImpl implements ILibrarianService {
-	
+
 	private ILibrarianDao librarianDao;
-	
+
 	@Override
 	public String libLogIn(Librarian logindata) {
 		librarianDao = librarianDaoFactory.getStudentDao();
+		System.out.println("Hello");
 		return librarianDao.libLogIn(logindata);
-		
+
 	}
-	
+
 	@Override
 	public String forloginPassword(String libid) {
 		librarianDao = librarianDaoFactory.getStudentDao();
@@ -47,7 +48,7 @@ public class LibrarianServiceImpl implements ILibrarianService {
 		librarianDao = librarianDaoFactory.getStudentDao();
 		return librarianDao.deleteBook(bookid);
 	}
-	
+
 	@Override
 	public Book getbookdata(String Bookid) {
 		librarianDao = librarianDaoFactory.getStudentDao();
@@ -70,14 +71,14 @@ public class LibrarianServiceImpl implements ILibrarianService {
 	public bookIssueData returnBook(String stdregNo) {
 		librarianDao = librarianDaoFactory.getStudentDao();
 		return librarianDao.returnBook(stdregNo);
-		
+
 	}
 
 	@Override
 	public ArrayList<Student> studentlist() {
 		librarianDao = librarianDaoFactory.getStudentDao();
 		return librarianDao.studentlist();
-		
+
 	}
 
 	@Override
@@ -122,5 +123,4 @@ public class LibrarianServiceImpl implements ILibrarianService {
 		return librarianDao.searchByAuthor(bauthor);
 	}
 
-	
 }
